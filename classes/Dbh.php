@@ -7,7 +7,7 @@ class Dbh{
     public $password = "zuriphp";
     public $dbname = "";
 
-    public function connect() {
+    protected function connect() {
         $conn = mysqli_connect($this->hostname, $this->username, $this->password, $this->dbname);
         if(!$conn){
             echo "<script> alert('Error connecting to the database') </script>";
